@@ -20,7 +20,7 @@ function App() {
 
   const handleAddTransaction = (newTransaction) => {
     // Add the new transaction to the 'transactions' state
-    setTransactions([transactions, newTransaction]);
+    setTransactions([...transactions, newTransaction]);
   };
   const handleSearch = (term) => {
     setSearchTerm(term);
