@@ -1,0 +1,148 @@
+/* Transaction Table Container */
+.TransactionTableContainer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Transaction Table */
+.TransactionTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+/* Table Header */
+.TransactionTable th {
+  background-color: #5e35b1;
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* Table Body - Rows */
+.TransactionTable td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  font-weight: 500;
+}
+
+/* Alternate row background color */
+.TransactionTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .TransactionTable {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .TransactionTable th,
+  .TransactionTable td {
+    white-space: nowrap;
+  }
+
+  .TransactionTable thead,
+  .TransactionTable tbody,
+  .TransactionTable tr,
+  .TransactionTable th,
+  .TransactionTable td {
+    display: block;
+  }
+
+  .TransactionTable thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .TransactionTable tbody tr {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+  }
+
+  .TransactionTable td {
+    border-bottom: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .TransactionTable td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
+
+/* Transaction Description */
+.TransactionDescription {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hover effect on rows */
+.TransactionTable tr:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Add a border to the table */
+.TransactionTable {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Styling for the 'Add Transaction' button */
+.addButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #5e35b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addTransactionForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.addTransactionForm label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.addTransactionForm input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addTransactionForm button {
+  padding: 8px 16px;
+  background-color: #5e35b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addTransactionForm button:hover,
+.addButton:hover {
+  background-color: #4527a0;
+}
+
